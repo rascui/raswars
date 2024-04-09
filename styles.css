@@ -15,6 +15,7 @@ body {
     font-family: Space Mono;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    overflow-x: hidden;
 }
 
 nav {
@@ -34,6 +35,8 @@ nav {
 
     background-color: var(--tertiary-color);
     border-radius: 50rem;
+
+    z-index: 20;
 }
 
 nav > div {
@@ -57,26 +60,23 @@ nav > div > a:hover {
 }
 
 .main-container {
-    width: calc(var(--my-width) + 6rem);
+    width: 100%;
     height: calc(100vh - 7rem);
 
-    position: absolute;
-    top: 5.75rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 5.75rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-radius: 2rem;
-    overflow: hidden;
 }
 
 .main-container > .image-container {
     height: 100%;
-    width: 100%;
+    width: calc(var(--my-width) + 6rem);
     position: relative;
+
+    border-radius: 2rem;
+    overflow: hidden;
 
     display: flex;
     justify-content: center;
@@ -168,4 +168,215 @@ nav > div > a:hover {
     li span {
         font-size: calc(3.375rem * var(--smaller));
     }
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+}
+
+/* BACKGROUND ANIMATION CSS */
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+
+    z-index: -5;
+}
+
+.animation-container > .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    backdrop-filter: blur(20px);
+}
+
+.animation-container > .ball1 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+
+    background-color: white;
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball2 {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+    background-color: greenyellow;
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball3 {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+
+    background-color: rgb(238, 64, 64);
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball4 {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+
+    background-color: rgb(0, 140, 255);
+
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball5 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+
+    background-color: var(--secondary-color);
+
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+
+/* FOOTER STYLES */
+
+footer {
+    width: 100%;
+    color: var(--tertiary-color);
+    height: 50rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    background-color: rgb(35, 37, 41);
+    width: calc(var(--my-width) + 6rem);
+    height: 90%;
+    border-radius: 2rem;
+}
+
+.footer-container > .logo-sponser-container {
+    width: calc(100% - 20rem);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45%;
+
+    margin: 0 10rem;
+}
+
+.footer-container > .logo-sponser-container > .sponser-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.footer-container > .logo-sponser-container > .sponser-container > h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+.footer-container > .logo-sponser-container > .sponser-container > a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.footer-container > .logo-sponser-container > .sponser-container > a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.footer-container > .logo-sponser-container > .logo-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-container > .logo-sponser-container > .logo-container > img {
+    width: 12rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.footer-container > .social-links-container {
+    width: calc(100% - 30rem);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45%;
+
+    margin: 0 15rem;
+}
+
+.footer-container > .social-links-container > .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.footer-container > .social-links-container > .social-container > a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.footer-container > .social-links-container > .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer-container > .social-links-container > .links-container > li > a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+.footer-container > .developed-container {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

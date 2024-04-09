@@ -4,23 +4,8 @@
         hour = minute * 60,
         day = hour * 24;
 
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "09/30/",
-        birthday = dayMonth + yyyy;
-
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-        birthday = dayMonth + nextYear;
-    }
-    //end
-
-    const countDown = new Date(birthday).getTime(),
+    const eventday = "May 17, 2024 00:00:00";
+    const countDown = new Date(eventday).getTime(),
         x = setInterval(function () {
             const now = new Date().getTime(),
                 distance = countDown - now;
@@ -41,7 +26,7 @@
             //do something later when date is reached
             if (distance < 0) {
                 document.getElementById("headline").innerText =
-                    "It's my birthday!";
+                    "DEADLINE HAS PASSED!!";
                 document.getElementById("countdown").style.display = "none";
                 document.getElementById("content").style.display = "block";
                 clearInterval(x);
@@ -49,3 +34,25 @@
             //seconds
         }, 0);
 })();
+
+const ball1 = document.querySelector(".ball1");
+const ball2 = document.querySelector(".ball2");
+const ball3 = document.querySelector(".ball3");
+const ball4 = document.querySelector(".ball4");
+const ball5 = document.querySelector(".ball5");
+
+function moveBall(ball) {
+    const xPosition = Math.random() * window.innerWidth;
+    const yPosition = Math.random() * window.innerHeight;
+
+    ball.style.left = `${xPosition}px`;
+    ball.style.top = `${yPosition}px`;
+}
+
+setInterval(() => {
+    moveBall(ball1);
+    moveBall(ball2);
+    moveBall(ball3);
+    moveBall(ball4);
+    moveBall(ball5);
+}, 5000);
