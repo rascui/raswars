@@ -1,382 +1,199 @@
-* {
-    margin: 0;
-    padding: 0;
+{
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary-color: #8d55e9;
-    --secondary-color: #4a4a4a;
-    --tertiary-color: #f5f5f5;
-    --smaller: 0.75;
-    --my-width: calc(100% - 2rem - 6rem);
+  --primary-color: #8d55e9;
+  --secondary-color: #4a4a4a;
+  --tertiary-color: #f5f5f5;
+  --smaller: 0.75;
+  --my-width: calc(100% - 2rem - 6rem);
 }
 
 body {
-    font-family: Space Mono;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    overflow-x: hidden;
+  font-family: Space Mono;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  overflow-x: hidden;
 }
 
 nav {
-    position: fixed;
-    top: 1rem;
+  position: fixed;
+  top: 1rem;
 
-    width: var(--my-width);
-    padding: 0 3rem;
+  width: var(--my-width);
+  padding: 0 3rem;
 
-    height: 3.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+  height: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background-color: var(--tertiary-color);
-    border-radius: 50rem;
+  background-color: var(--tertiary-color);
+  border-radius: 50rem;
 
-    z-index: 20;
+  z-index: 20;
 }
 
 nav > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
 nav > div > a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 1rem;
-    font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 700;
 
-    transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 nav > div > a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .main-container {
-    width: 100%;
-    height: calc(100vh - 7rem);
+  width: 100%;
+  height: calc(100vh - 7rem);
 
-    margin-top: 5.75rem;
+  margin-top: 5.75rem;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container > .image-container {
-    height: 100%;
-    width: calc(var(--my-width) + 6rem);
-    position: relative;
+  height: 100%;
+  width: calc(var(--my-width) + 6rem);
+  position: relative;
 
-    border-radius: 2rem;
-    overflow: hidden;
+  border-radius: 2rem;
+  overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container > .image-container > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .main-container > .image-container::after {
-    content: "";
-    position: absolute;
+  content: "";
+  position: absolute;
 
-    display: inline-block;
+  display: inline-block;
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .countdown-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    color: var(--tertiary-color);
+  color: var(--tertiary-color);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .countdown-container > .container {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .countdown-container > .container > h1 {
-    font-weight: normal;
-    letter-spacing: 0.125rem;
-    text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
 }
 
 #countdown ul li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
 }
 
 #countdown ul li span {
-    display: block;
-    font-size: 4.5rem;
+  display: block;
+  font-size: 4.5rem;
 }
 
 .emoji {
-    display: none;
-    padding: 1rem;
+  display: none;
+  padding: 1rem;
 }
 
-.emoji span {
-    font-size: 4rem;
-    padding: 0 0.5rem;
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  padding: 1rem 3rem;
+  background-color: #007bff; /* Blue for robotics */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+  position: fixed; /* Make it fixed at the top */
+  top: 0;
+  z-index: 10; /* Ensure it stays above other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media all and (max-width: 768px) {
-    h1 {
-        font-size: calc(1.5rem * var(--smaller));
-    }
-
-    li {
-        font-size: calc(1.125rem * var(--smaller));
-    }
-
-    li span {
-        font-size: calc(3.375rem * var(--smaller));
-    }
+.navbar > a {
+  text-decoration: none;
+  color: #fff; /* White for text*/
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
-.btn {
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 10rem;
+.navbar > a:hover {
+  color: #0056b3; /* Darker blue on hover*/
+}
+/* Register Button */
+
+.register-btn {
+  background-color: #007bff; /* Blue for robotics (primary) */
+  color: #fff; /* White for text (secondary) */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 2rem auto; /* Center the button horizontally */
+  display: block; /* Make it a block-level element */
 }
 
-/* BACKGROUND ANIMATION CSS */
-.animation-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    max-height: 100%;
-
-    z-index: -5;
-}
-
-.animation-container > .blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    backdrop-filter: blur(20px);
-}
-
-.animation-container > .ball1 {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-
-    background-color: white;
-
-    position: absolute;
-    z-index: -3;
-
-    transition: all 5s linear;
-}
-.animation-container > .ball2 {
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-
-    background-color: greenyellow;
-
-    position: absolute;
-    z-index: -3;
-
-    transition: all 5s linear;
-}
-.animation-container > .ball3 {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-
-    background-color: rgb(238, 64, 64);
-
-    position: absolute;
-    z-index: -3;
-
-    transition: all 5s linear;
-}
-.animation-container > .ball4 {
-    width: 14rem;
-    height: 14rem;
-    border-radius: 50%;
-
-    background-color: rgb(0, 140, 255);
-
-    position: absolute;
-    top: 5%;
-    left: 20%;
-    z-index: -3;
-
-    transition: all 5s linear;
-}
-.animation-container > .ball5 {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-
-    background-color: var(--secondary-color);
-
-    position: absolute;
-    top: 5%;
-    left: 20%;
-    z-index: -3;
-
-    transition: all 5s linear;
-}
-
-/* FOOTER STYLES */
-
-footer {
-    width: 100%;
-    color: var(--tertiary-color);
-    height: 50rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-container {
-    background-color: rgb(35, 37, 41);
-    width: calc(var(--my-width) + 6rem);
-    height: 90%;
-    border-radius: 2rem;
-}
-
-.footer-container > .logo-sponser-container {
-    width: calc(100% - 20rem);
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45%;
-
-    margin: 0 10rem;
-}
-
-.footer-container > .logo-sponser-container > .sponser-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-
-    width: 50%;
-}
-
-.footer-container > .logo-sponser-container > .sponser-container > h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: bolder;
-
-    margin: 0;
-}
-
-.footer-container > .logo-sponser-container > .sponser-container > a {
-    color: var(--tertiary-color);
-    text-decoration: none;
-}
-
-.footer-container > .logo-sponser-container > .sponser-container > a:hover {
-    text-decoration: underline;
-    color: var(--primary-color);
-}
-
-.footer-container > .logo-sponser-container > .logo-container {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.footer-container > .logo-sponser-container > .logo-container > img {
-    width: 12rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: contain;
-}
-
-.footer-container > .social-links-container {
-    width: calc(100% - 30rem);
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45%;
-
-    margin: 0 15rem;
-}
-
-.footer-container > .social-links-container > .social-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1rem;
-    flex-direction: column;
-}
-
-.footer-container > .social-links-container > .social-container > a {
-    color: var(--tertiary-color);
-    text-decoration: none;
-}
-
-.footer-container > .social-links-container > .links-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-    flex-direction: column;
-    list-style: none;
-}
-
-.footer-container > .social-links-container > .links-container > li > a {
-    text-decoration: none;
-    color: var(--tertiary-color);
-}
-
-.footer-container > .developed-container {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.register-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
