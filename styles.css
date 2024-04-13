@@ -1,26 +1,26 @@
-{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 @font-face {
-    font-family: 'Abnes';
-    src: url('assets/Fonts/abnes.ttf');
+    font-family: "Abnes";
+    src: url("assets/Fonts/abnes.ttf");
 }
 @font-face {
-    font-family: 'Digital Play St';
-    src: url('assets/Fonts/Digital\ Play\ St.ttf');
+    font-family: "Digital Play St";
+    src: url("assets/Fonts/Digital\ Play\ St.ttf");
 }
 @font-face {
-    font-family: 'BatmanForeverAlternate';
-    src: url('assets/Fonts/batmfa__.ttf');
+    font-family: "BatmanForeverAlternate";
+    src: url("assets/Fonts/batmfa__.ttf");
 }
 @font-face {
-    font-family: 'Conthrax Sb';
-    src: url('assets/Fonts/conthrax-sb.otf');
+    font-family: "Conthrax Sb";
+    src: url("assets/Fonts/conthrax-sb.otf");
 }
 @font-face {
-    font-family: 'Hemi Head Bd';
-    src: url('assets/Fonts/hemi\ head\ bd\ it.otf');
+    font-family: "Hemi Head Bd";
+    src: url("assets/Fonts/hemi\ head\ bd\ it.otf");
 }
 
 :root {
@@ -40,155 +40,257 @@ body {
 }
 
 nav {
-    font-family: 'Conthrax Sb';
+    font-family: "Conthrax Sb";
     position: fixed;
     top: 1rem;
 
-  width: var(--my-width);
-  padding: 0 3rem;
+    width: var(--my-width);
+    padding: 0 3rem;
 
-  height: 3.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+    height: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  background-color: var(--tertiary-color);
-  border-radius: 50rem;
+    background-color: var(--tertiary-color);
+    border-radius: 50rem;
 
-  z-index: 20;
+    z-index: 20;
 }
 
 nav > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 nav > div > a {
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-size: 1rem;
-  font-weight: 700;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 700;
 
-  transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 nav > div > a:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .main-container {
-  width: 100%;
-  height: calc(100vh - 7rem);
+    width: 100%;
+    height: calc(100vh - 7rem);
 
     margin-top: 5.75rem;
-/* 
+    /* 
     display: flex; */
     justify-content: center;
     align-items: center;
 }
 
 .main-container > .image-container {
-  height: 100%;
-  width: calc(var(--my-width) + 6rem);
-  position: relative;
+    height: 100%;
+    width: calc(var(--my-width) + 6rem);
+    position: relative;
 
-  border-radius: 2rem;
-  overflow: hidden;
+    border-radius: 2rem;
+    overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container > .image-container > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main-container > .image-container::after {
-  content: "";
-  position: absolute;
+    content: "";
+    position: absolute;
 
-  display: inline-block;
+    display: inline-block;
 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.title{
-    
+.title {
     font-size: 40px;
-    font-family: 'Abnes';
-} 
-.register-text{
-   font-family: 'BatmanForeverAlternate'; 
+    font-family: "Abnes";
 }
-.timeline-heading{
-    font-family: 'Conthrax Sb';
+.register-text {
+    font-family: "BatmanForeverAlternate";
 }
-.timeline-para{
-    font-family: 'Hemi Head Bd';
+.timeline-heading {
+    font-family: "Conthrax Sb";
+}
+.timeline-para {
+    font-family: "Hemi Head Bd";
     color: rgb(230, 225, 225);
 }
 
 .countdown-container {
     width: 100%;
     height: 100%;
-font-family: 'Digital Play St';
+    font-family: "Digital Play St";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-  color: var(--tertiary-color);
+    color: var(--tertiary-color);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-  z-index: 10;
+    z-index: 10;
 }
 
 .countdown-container > .container {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .countdown-container > .container > h1 {
-  font-weight: normal;
-  letter-spacing: 0.125rem;
-  text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
 }
 
 #countdown ul li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
 }
 
 #countdown ul li span {
-  display: block;
-  font-size: 4.5rem;
+    display: block;
+    font-size: 4.5rem;
 }
 
 .emoji {
-  display: none;
-  padding: 1rem;
+    display: none;
+    padding: 1rem;
 }
 
+.emoji span {
+    font-size: 4rem;
+    padding: 0 0.5rem;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+}
+
+/* BACKGROUND ANIMATION CSS */
+.animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+
+    z-index: -5;
+}
+
+.animation-container > .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    backdrop-filter: blur(20px);
+}
+
+.animation-container > .ball1 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+
+    background-color: white;
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball2 {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+
+    background-color: greenyellow;
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball3 {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+
+    background-color: rgb(238, 64, 64);
+
+    position: absolute;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball4 {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+
+    background-color: rgb(0, 140, 255);
+
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    z-index: -3;
+
+    transition: all 5s linear;
+}
+.animation-container > .ball5 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
 
     background-color: var(--secondary-color);
 
@@ -283,47 +385,47 @@ footer {
 }
 
 .navbar {
-  width: 100%;
-  padding: 1rem 3rem;
-  background-color: #007bff; /* Blue for robotics */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-  position: fixed; /* Make it fixed at the top */
-  top: 0;
-  z-index: 10; /* Ensure it stays above other elements */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: #007bff; /* Blue for robotics */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    position: fixed; /* Make it fixed at the top */
+    top: 0;
+    z-index: 10; /* Ensure it stays above other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar > a {
-  text-decoration: none;
-  color: #fff; /* White for text*/
-  font-size: 1rem;
-  font-weight: 700;
-  transition: all 0.25s ease;
+    text-decoration: none;
+    color: #fff; /* White for text*/
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
 }
 
 .navbar > a:hover {
-  color: #0056b3; /* Darker blue on hover*/
+    color: #0056b3; /* Darker blue on hover*/
 }
 /* Register Button */
 
 .register-btn {
-  background-color: #007bff; /* Blue for robotics (primary) */
-  color: #fff; /* White for text (secondary) */
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  margin: 2rem auto; /* Center the button horizontally */
-  display: block; /* Make it a block-level element */
+    background-color: #007bff; /* Blue for robotics (primary) */
+    color: #fff; /* White for text (secondary) */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 2rem auto; /* Center the button horizontally */
+    display: block; /* Make it a block-level element */
 }
 
 .register-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 .wrapper {
@@ -368,10 +470,10 @@ footer {
     z-index: 2;
 }
 .timelineBody .timeline:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 4px;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
     top: 0;
     right: auto;
     left: 173px;
@@ -390,17 +492,17 @@ footer {
 .timelineBody .timeline .timelineDot {
     height: 1.5rem;
     width: 1.5rem;
-    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
     border-radius: 2rem;
     flex: 0 0 1.5rem;
     /* margin-right: auto; */
     margin-top: 6px;
-    
+
     position: absolute;
     left: -17px;
 }
 .timelineBody .timeline .timelineDot::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 9px;
     left: 3px;
@@ -413,7 +515,7 @@ footer {
     flex: 0 0 80px;
     padding: 0.2rem;
 }
-.timelineContent{
+.timelineContent {
     text-align: justify;
     width: 100%;
 }
@@ -454,8 +556,7 @@ footer {
     color: #000;
 }
 
-
-.timeline-container{
+.timeline-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -465,14 +566,12 @@ footer {
     border-radius: 3%;
     box-shadow: rgb(46, 45, 45) 0px 7px 5px 0px;
 }
-.timeline{
- 
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center horizontally */
-        align-items: center; 
-        width: 80%; 
-        max-width: 800px; 
-        margin: 0 auto; 
-    }
-    
+.timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
