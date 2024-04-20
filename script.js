@@ -4,7 +4,7 @@
         hour = minute * 60,
         day = hour * 24;
 
-    const eventday = "May 15, 2024 00:00:00";
+    const eventday = "May 14, 2024 00:00:00";
     const countDown = new Date(eventday).getTime(),
         x = setInterval(function () {
             const now = new Date().getTime(),
