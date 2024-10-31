@@ -81,6 +81,11 @@ nav > div > a:hover {
     color: var(--primary-color);
 }
 
+nav > div > a[href="#register-now"]:hover {
+    background-color: #ffffff;
+    border: 2px solid var(--primary-color);
+}
+
 .main-container {
     width: 100%;
     height: calc(100vh - 7rem);
